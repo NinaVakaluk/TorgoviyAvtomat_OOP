@@ -1,38 +1,32 @@
-package lesson_7;
-
-public class Product {
-
+public abstract class Product {
     private String name;
-    private Double cost;
+    private Double price;
 
+    public Product() {
+    }
 
-    public  Product(String name, Double cost){
+    public Product(String name, Double price) {
         this.name = name;
-        this.cost = cost;
+        this.price = price;
     }
 
-    public void setName(String name){
+   
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getName(){
-       return this.name;
+   
+    public Double getPrice() {
+        return price;
     }
-
-
-    public void setCost(Double cost){
-        this.cost = cost;
+    public void  setPrice (Double price) {
+        this.price = price;
     }
-
-    public Double getCost(){
-        return this.cost;
-    }
-
-    @Override
     public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", cost=" + cost +
-                '}';
-    }
+        return "\"" + name + "\" стоит: " + price + " у.е. ";
+    }                                                           
 }
